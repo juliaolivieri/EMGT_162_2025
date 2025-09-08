@@ -98,6 +98,15 @@ ORDER BY prod_price DESC
 LIMIT 5 OFFSET 5;
 ```
 
+Sort by product description and find the third, fourth, and fifth product from this sorted order
+
+```
+SELECT *
+FROM Products
+ORDER BY prod_desc
+LIMIT 3 OFFSET 2;
+```
+
 ## WHERE
 
 Find all products with a price of 3.49
@@ -347,6 +356,7 @@ ON Products.vend_id = Vendors.vend_ID
 INNER JOIN OrderItems
 ON Products.prod_id = OrderItems.prod_id;
 ```
+
 
 
 
