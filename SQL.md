@@ -123,6 +123,14 @@ FROM Products
 WHERE vend_id != "DLL01";
 ```
 
+Another way
+
+```
+SELECT *
+FROM Products
+WHERE NOT vend_id = "DLL01";
+```
+
 Find all products with prices between 3.49 and 8.99 (inclusive)
 
 ```
@@ -135,8 +143,53 @@ Find all customers without an email address in the database
 
 ```
 SELECT *
-FROM CUSTOMERS
+FROM Customers
 WHERE cust_email IS NULL;
 ```
 
+Find products where the vendor id is `DLL01` and the price is less than or equal to 4
+
+```
+SELECT *
+FROM Products
+WHERE vend_id = "DLL01"
+AND prod_price <= 4;
+```
+
+Find products where the vendor id is `DLL01` or `BRS01`
+
+```
+SELECT *
+FROM Products
+WHERE vend_id = "DLL01"
+OR vend_id = "BRS01";
+```
+
+Do it another way
+
+```
+SELECT *
+FROM Products
+WHERE vend_id IN ("DLL01", "BRS01");
+```
+
+Find products where the vendor id is `DLL01` or `BRS01`, and the price is greater than or equal to 10
+
+```
+SELECT *
+FROM Products
+WHERE (vend_id = "DLL01"
+OR vend_id = "BRS01")
+AND prod_price >= 10;
+```
+
+Find products where the vendor id is `DLL01`, or the vendor id is `BRS01` and the price is greater than or equal to 10
+
+```
+SELECT *
+FROM Products
+WHERE vend_id = "DLL01"
+OR (vend_id = "BRS01"
+AND prod_price >= 10);
+```
 
