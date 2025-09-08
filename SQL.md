@@ -4,6 +4,8 @@ Find all the information about each product
 
 ## SELECT
 
+Find all information about each product
+
 ```
 SELECT *
 FROM Products;
@@ -321,6 +323,7 @@ SELECT vend_id, AVG(prod_price) AS avg_price
 FROM Products
 GROUP BY vend_id;
 ```
+
 
 
 
