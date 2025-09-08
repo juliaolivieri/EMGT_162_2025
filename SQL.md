@@ -349,7 +349,6 @@ ON Products.prod_id = OrderItems.prod_id;
 ```
 
 
-Find the total price of all items in each order
 
 
 
