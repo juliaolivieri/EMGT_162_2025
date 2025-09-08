@@ -97,3 +97,46 @@ LIMIT 5 OFFSET 5;
 ```
 
 ## WHERE
+
+Find all products with a price of 3.49
+
+```
+SELECT *
+FROM Products
+WHERE prod_price = 3.49;
+```
+
+Find all products with a price less than 10, sorted by price
+
+```
+SELECT *
+FROM Products
+WHERE prod_price < 10
+ORDER BY prod_price;
+```
+
+Find all products not made by vendor `DLL01`:
+
+```
+SELECT *
+FROM Products
+WHERE vend_id != "DLL01";
+```
+
+Find all products with prices between 3.49 and 8.99 (inclusive)
+
+```
+SELECT *
+FROM Products
+WHERE prod_price BETWEEN 3.49 AND 8.99;
+```
+
+Find all customers without an email address in the database
+
+```
+SELECT *
+FROM CUSTOMERS
+WHERE cust_email IS NULL;
+```
+
+
