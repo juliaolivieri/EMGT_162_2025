@@ -317,10 +317,39 @@ FROM Products
 GROUP BY vend_id;
 ```
 
+Find the total price of all items in each order
+
+```
+SELECT order_num, SUM(quantity * item_price) AS total_price
+FROM OrderItems
+GROUP BY order_num;
+```
 
 
+## Joins
+
+Join the Vendors and Products relations on vend_id
+
+```
+SELECT *
+FROM Vendors
+INNER JOIN Products
+ON Vendors.vend_id = Products.vend_id;
+```
+
+Join the OrderIems, Products, and Vendors tables. Join Products and Vendors on vend_id, and OrderItems and Products on prod_id
+
+```
+SELECT *
+FROM Products
+INNER JOIN Vendors
+ON Products.vend_id = Vendors.vend_ID
+INNER JOIN OrderItems
+ON Products.prod_id = OrderItems.prod_id;
+```
 
 
+Find the total price of all items in each order
 
 
 
