@@ -193,3 +193,56 @@ OR (vend_id = "BRS01"
 AND prod_price >= 10);
 ```
 
+### Wildcard filtering
+
+Find all products that start with the word "Fish"
+
+```
+SELECT *
+FROM Products
+WHERE prod_name LIKE "FISH%";
+``` 
+
+Find all products that include the phrase "bean bag"
+
+```
+SELECT *
+FROM Products
+WHERE prod_name LIKE "%bean bag%";
+```
+
+Find all products that begin with F and end with y
+
+```
+SELECT *
+FROM Products
+WHERE prod_name LIKE "F%y";
+```
+
+Find all products with names that end with "inch teddy bear"
+
+```
+SELECT *
+FROM Products
+WHERE prod_name LIKE "%inch teddy bear";
+```
+
+Find all products with names that match "__ inch teddy bear" (where underscore can be any character)
+
+```
+SELECT *
+FROM Products
+WHERE prod_name LIKE "__ inch teddy bear";
+```
+
+Find customers whos names start with J or M
+
+```
+SELECT *
+FROM Customers
+WHERE cust_contact LIKE "[JM]%";
+```
+
+## Aggregate Functions
+
+
