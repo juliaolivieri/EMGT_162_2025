@@ -1,4 +1,40 @@
-## SQL commands
+# SQL commands
+
+Find all the information about each product
+
+## SELECT
+
+```
+SELECT *
+FROM Products;
+```
+
+Find the name and price of each product
+
+```
+SELECT prod_price, prod_name
+FROM Products;
+```
+
+### DISTINCT 
+
+List the distinct vendors that the products come from
+
+```
+SELECT DISTINCT vend_id
+FROM Products;
+```
+
+Find every unique combination of vendor and price
+
+
+
+```
+SELECT DISTINCT vend_id, prod_price
+FROM Products;
+```
+
+### ORDER BY
 
 ### SELECT
 
@@ -49,3 +85,4 @@ WHERE condition
 
 
 ```
+
