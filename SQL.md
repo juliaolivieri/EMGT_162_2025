@@ -302,7 +302,7 @@ Find the total price of order 20005
 SELECT SUM(item_price * quantity) AS total_price
 FROM OrderItems
 WHERE order_num = 20005;
-``` 
+```
 
 ## GROUP BY
 
@@ -313,6 +313,7 @@ SELECT vend_id, COUNT(*) AS num_prods
 FROM Products
 GROUP BY vend_id;
 ```
+
 
 
 
