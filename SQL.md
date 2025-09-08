@@ -314,6 +314,15 @@ FROM Products
 GROUP BY vend_id;
 ```
 
+Find the average product price per vendor
+
+```
+SELECT vend_id, AVG(prod_price) AS avg_price
+FROM Products
+GROUP BY vend_id;
+```
+
+
 
 
 
