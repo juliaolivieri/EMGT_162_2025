@@ -245,5 +245,75 @@ WHERE cust_contact LIKE "[JM]%";
 
 ## Aggregate Functions
 
+Find the average product price
+
+```
+SELECT AVG(prod_price) AS avg_price
+FROM Products;
+```
+
+Find the average product price for the vendor `DLL01`
+
+```
+SELECT AVG(prod_price) AS avg_price
+FROM Products
+WHERE vend_id = "DLL01";
+```
+
+Count the number of rows in the customer table
+
+```
+SELECT COUNT(*) AS num_cust
+FROM Customers;
+```
+
+Count customers with email addresses
+
+```
+SELECT COUNT(cust_email) AS num_cust
+FROM Customers;
+```
+
+Find the maximum product price
+
+```
+SELECT MAX(prod_price) AS max_price
+FROM Products;
+```
+
+Find the minimum product price
+
+```
+SELECT MIN(prod_price) as min_price
+FROM Products;
+```
+
+Find the total number of items ordered in order 20005
+
+```
+SELECT SUM(quantity) AS items_ordered
+FROM OrderItems
+WHERE order_num = 20005;
+```
+
+Find the total price of order 20005
+
+```
+SELECT SUM(item_price * quantity) AS total_price
+FROM OrderItems
+WHERE order_num = 20005;
+``` 
+
+## GROUP BY
+
+Find the number of products from each vendor
+
+```
+SELECT vend_id, COUNT(*) AS num_prods
+FROM Products
+GROUP BY vend_id;
+```
+
+
 
 
