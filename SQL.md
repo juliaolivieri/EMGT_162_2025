@@ -201,7 +201,7 @@ Find all products that start with the word "Fish"
 SELECT *
 FROM Products
 WHERE prod_name LIKE "FISH%";
-``` 
+```
 
 Find all products that include the phrase "bean bag"
 
@@ -244,5 +244,6 @@ WHERE cust_contact LIKE "[JM]%";
 ```
 
 ## Aggregate Functions
+
 
 
