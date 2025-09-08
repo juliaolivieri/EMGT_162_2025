@@ -237,13 +237,6 @@ FROM Products
 WHERE prod_name LIKE "__ inch teddy bear";
 ```
 
-Find customers whos names start with J or M
-
-```
-SELECT *
-FROM Customers
-WHERE cust_contact LIKE "[JM]%";
-```
 
 ## Aggregate Functions
 
@@ -323,6 +316,7 @@ SELECT vend_id, AVG(prod_price) AS avg_price
 FROM Products
 GROUP BY vend_id;
 ```
+
 
 
 
