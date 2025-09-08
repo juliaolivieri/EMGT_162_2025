@@ -318,10 +318,10 @@ FROM Products
 GROUP BY vend_id;
 ```
 
-Find the average product price per vendor
+Find the maximum product price per vendor
 
 ```
-SELECT vend_id, AVG(prod_price) AS avg_price
+SELECT vend_id, MAX(prod_price) AS max_price
 FROM Products
 GROUP BY vend_id;
 ```
@@ -356,6 +356,7 @@ ON Products.vend_id = Vendors.vend_ID
 INNER JOIN OrderItems
 ON Products.prod_id = OrderItems.prod_id;
 ```
+
 
 
 
