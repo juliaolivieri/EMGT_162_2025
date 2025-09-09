@@ -1,3 +1,4 @@
+```
 -- Find the names of all the instructors from Biology department
 SELECT name
 FROM instructor
@@ -66,3 +67,5 @@ AND year = 2018;
 -- Display the IDs of all instructors who have never taught a course. 
 
 -- Display the names and IDs of all instructors who have never taught a course. 
+
+```
