@@ -55,17 +55,57 @@ WHERE student.ID = 45678
 AND semester = "Spring" 
 AND year = 2018;
 
-
-
-
 -- Use SQL aggregation to find the total number of credits the student with ID 45678 is taking in Spring 2018
 
--- Use SQL aggregation to find the total number of credits taken by each student in Spring 2018. Omit any students who are not registered for any classes in Spring 2018.
+SELECT SUM(credits)
+FROM student
+INNER JOIN takes
+ON student.ID = takes.ID
+INNER JOIN course
+ON takes.course_id = course.course_id
+WHERE student.ID = 45678
+AND semester = "Spring"
+AND year = 2018;
+
+-- Use SQL aggregation to find the total number of credits taken by each student in Spring 2018. You do not need to include students who are not registered for any classes in Spring 2018.
+SELECT student.ID, SUM(credits)
+FROM student
+INNER JOIN takes
+ON student.ID = takes.ID
+INNER JOIN course
+ON takes.course_id = course.course_id
+WHERE semester = "Spring"
+AND year = 2018
+GROUP BY student.ID ;
 
 -- Find the names of all students who have taken any Comp. Sci. course ever (there should be no duplicate names)
 
+SELECT DISTINCT student.name
+FROM student
+INNER JOIN takes
+ON student.ID = takes.ID
+WHERE course_id LIKE "CS-%";
+
+-- Another way 
+
+SELECT DISTINCT student.name
+FROM student
+INNER JOIN takes
+ON student.ID = takes.ID
+INNER JOIN course
+ON takes.course_id = course.course_id
+WHERE course.dept_name = "Comp. Sci.";
+
 -- Display the IDs of all instructors who have never taught a course. 
+
+SELECT * 
+FROM instructor
+LEFT JOIN teaches
+ON instructor.ID = teaches.ID
+WHERE sec_id IS NULL;
 
 -- Display the names and IDs of all instructors who have never taught a course. 
 
+SELECT *
+FROM instructor
 ```
