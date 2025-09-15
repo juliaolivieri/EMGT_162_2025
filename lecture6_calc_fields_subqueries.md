@@ -24,3 +24,35 @@ SELECT prod_name, prod_price - 0.7 * prod_price AS profit_margin
 FROM Products;
 ```
 
+## Subqueries
+
+Find the names of all products with the minimum price
+
+```
+SELECT *
+FROM Products
+WHERE prod_price = (SELECT MIN(prod_price)
+											FROM Products);
+```
+
+Find the names of all products whose vendors are in the US
+
+```
+SELECT *
+FROM Products
+WHERE vend_id IN (SELECT vend_id
+											FROM Vendors
+											WHERE vend_country = "USA");
+```
+
+Find the names of all products in order 20007
+
+```
+SELECT *
+FROM Products
+WHERE prod_id IN (SELECT prod_id
+											FROM OrderItems
+											WHERE order_num = 20007);
+```
+
+
