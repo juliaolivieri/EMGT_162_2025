@@ -36,6 +36,15 @@ FROM Products;
 UPDATE Customers
 SET cust_email = 'michelle@toysr.us'
 WHERE cust_id = '1000000002';
+
+UPDATE Customers
+SET cust_email = 'michelle@toysr.us';
+
+UPDATE Customers
+SET cust_contact = 'Powercat',
+	cust_email = 'pc@cats.edu',
+	cust_address = NULL
+WHERE cust_id = '1000000001';
 ```
 
 ## CREATE
@@ -65,6 +74,7 @@ VALUES
 (200000005, 'Adventure Toys', '321 Explorer Ave', 'Denver', 'CO', '80202', 'USA', 'Sophia Patel', 'sophia@adventuretoys.com');
 
 ```
+
 
 
 
