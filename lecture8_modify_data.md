@@ -56,6 +56,18 @@ WHERE prod_price > 9;
 Create new table
 
 ```
+
+CREATE TABLE Stores
+(
+	store_id INT PRIMARY KEY NOT NULL,
+	store_name TEXT NOT NULL,
+	store_address TEXT,
+	store_manager TEXT DEFAULT ‘Powercat’,
+	vend_id TEXT,
+	FOREIGN KEY (vend_id) REFERENCES Vendors(vend_id)
+);
+
+
 CREATE TABLE NewCustomers (
     cust_id      INT PRIMARY KEY,
     cust_name    VARCHAR(100),
@@ -77,6 +89,8 @@ VALUES
 (200000004, 'Smart Toys', '654 Learning St', 'Boston', 'MA', '02108', 'USA', 'David Chen', 'dchen@smarttoys.com'),
 (200000005, 'Adventure Toys', '321 Explorer Ave', 'Denver', 'CO', '80202', 'USA', 'Sophia Patel', 'sophia@adventuretoys.com');
 
+
+
 ```
 
 ## DELETE
@@ -87,7 +101,10 @@ WHERE cust_id LIKE 'B%';
 
 DELETE FROM Customers
 WHERE cust_id LIKE 'R%';
+
+DELETE FROM OrderItemsBackup;
 ```
+
 
 
 
