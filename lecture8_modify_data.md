@@ -22,6 +22,10 @@ VALUES('10000000078',
 INSERT INTO Customers(cust_id, cust_name, cust_address, cust_city, cust_state, cust_zip, cust_country, cust_contact, cust_email)
 SELECT cust_id, cust_name, cust_address, cust_city, cust_state, cust_zip, cust_country, cust_contact, cust_email
 FROM NewCustomers;
+
+INSERT INTO Customers(cust_id, cust_name, cust_email)
+SELECT prod_id, vend_id, prod_price
+FROM Products;
 ```
 
 Create new table
@@ -49,6 +53,7 @@ VALUES
 (200000005, 'Adventure Toys', '321 Explorer Ave', 'Denver', 'CO', '80202', 'USA', 'Sophia Patel', 'sophia@adventuretoys.com');
 
 ```
+
 
 
 
