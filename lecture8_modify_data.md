@@ -79,6 +79,17 @@ VALUES
 
 ```
 
+## DELETE
+
+```
+DELETE FROM Customers
+WHERE cust_id LIKE 'B%';
+
+DELETE FROM Customers
+WHERE cust_id LIKE 'R%';
+```
+
+
 
 
 
