@@ -9,11 +9,12 @@ Create new table
 
 CREATE TABLE Stores
 (
-	store_id INT PRIMARY KEY NOT NULL,
+	store_id INT NOT NULL,
 	store_name TEXT NOT NULL,
 	store_address TEXT,
 	store_manager TEXT DEFAULT ‘Powercat’,
 	vend_id TEXT,
+	PRIMARY KEY (store_id),
 	FOREIGN KEY (vend_id) REFERENCES Vendors(vend_id)
 );
 
@@ -110,6 +111,7 @@ WHERE cust_id LIKE 'R%';
 
 DELETE FROM OrderItemsBackup;
 ```
+
 
 
 
