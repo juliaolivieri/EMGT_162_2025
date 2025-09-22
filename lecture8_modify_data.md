@@ -1,5 +1,7 @@
 # Lecture 8: Modifying data
 
+## INSERT
+
 ```
 INSERT INTO Customers
 VALUES('1000000007',
@@ -28,6 +30,16 @@ SELECT prod_id, vend_id, prod_price
 FROM Products;
 ```
 
+## UPDATE
+
+```
+UPDATE Customers
+SET cust_email = 'michelle@toysr.us'
+WHERE cust_id = '1000000002';
+```
+
+## CREATE
+
 Create new table
 
 ```
@@ -53,6 +65,7 @@ VALUES
 (200000005, 'Adventure Toys', '321 Explorer Ave', 'Denver', 'CO', '80202', 'USA', 'Sophia Patel', 'sophia@adventuretoys.com');
 
 ```
+
 
 
 
