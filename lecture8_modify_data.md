@@ -17,6 +17,11 @@ INSERT INTO Customers(cust_id,
      			      cust_name)					
 VALUES('10000000078',
 	   'Toys R Us');
+
+
+INSERT INTO Customers(cust_id, cust_name, cust_address, cust_city, cust_state, cust_zip, cust_country, cust_contact, cust_email)
+SELECT cust_id, cust_name, cust_address, cust_city, cust_state, cust_zip, cust_country, cust_contact, cust_email
+FROM NewCustomers;
 ```
 
 Create new table
@@ -44,6 +49,7 @@ VALUES
 (200000005, 'Adventure Toys', '321 Explorer Ave', 'Denver', 'CO', '80202', 'USA', 'Sophia Patel', 'sophia@adventuretoys.com');
 
 ```
+
 
 
 
