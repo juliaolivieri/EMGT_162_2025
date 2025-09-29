@@ -54,3 +54,21 @@ GROUP BY prod_name
 ORDER BY num_orders DESC;
 ```
 
+## HAVING (with GROUP BY)
+
+```
+-- Find the number of orders of all customers who placed more than one order
+
+SELECT cust_id, COUNT(*) AS num_orders
+FROM Orders
+GROUP BY cust_id
+HAVING num_orders > 1;
+
+-- List all vendors who have two or more products priced at 4 or more:
+
+SELECT vend_id, COUNT(*) AS num_prod_4
+FROM Products
+WHERE prod_price >= 4
+GROUP BY vend_id
+HAVING num_prod_4 >= 2;
+```
