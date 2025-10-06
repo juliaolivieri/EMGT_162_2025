@@ -125,24 +125,49 @@
 
 ```
 Row key: 1
-  info:owner_name = "Alice"
-  info:species = "Dog"
-  health:meds = ["Heartgard"]
-  behavior:tricks = ["Sit", "Stay", "Fetch"]
-  meta:notes = "Loves swimming"
+  info:owner_name      = "Alice"
+  info:species         = "Dog"
+  info:breed           = "Labrador"
+  info:birth_date      = "2020-05-10"
+  health:meds          = ["Heartgard"]
+  health:vet_visits    = 2
+  behavior:tricks      = ["Sit","Stay","Fetch"]
+  meta:notes           = "Loves swimming"
 
 Row key: 2
-  info:owner_name = "Bob"
-  info:species = "Cat"
-  care:shed_frequency = "Weekly"
-  meta:notes = "Indoor only"
+  info:owner_name      = "Bob"
+  info:species         = "Cat"
+  info:breed           = "Siamese"
+  info:birth_date      = "2022-01-15"
+  care:shed_frequency  = "Weekly"
+  meta:notes           = "Indoor only"
 
 Row key: 3
-  info:owner_name = "Cara"
-  info:species = "Parrot"
-  health:meds = ["Vitamin drops"]
-  speech:words_known = ["Hello", "Pretty bird", "Bye-bye"]
-  meta:notes = "Very talkative"
+  info:owner_name      = "Cara"
+  info:species         = "Parrot"
+  info:breed           = "African Grey"
+  info:birth_date      = "2018-03-12"
+  health:meds          = ["Vitamin drops"]
+  speech:words_known   = ["Hello","Pretty bird","Bye-bye"]
+  meta:notes           = "Very talkative"
+
+Row key: 4
+  info:owner_name      = "Deepa"
+  info:species         = "Snake"
+  info:breed           = "Corn Snake"
+  info:birth_date      = "2021-10-05"
+  care:shed_frequency  = "Rarely"
+  health:vet_visits    = 3
+  meta:notes           = "Eats frozen mice"
+
+Row key: 5
+  info:owner_name      = "Evan"
+  info:species         = "Dog"
+  info:breed           = "Beagle"
+  info:birth_date      = "2019-12-20"
+  health:meds          = ["Heartgard","Flea collar"]
+  behavior:tricks      = ["Roll over"]
+  meta:notes           = "Friendly with kids"
 
 ```
 
@@ -151,22 +176,56 @@ Row key: 3
 ### Nodes:
 
 ```
+
 (:Owner {name:"Alice"})
-(:Pet {species:"Dog", breed:"Labrador"})
-(:VetVisit {id:501, date:"2025-09-10"})
+(:Owner {name:"Bob"})
+(:Owner {name:"Cara"})
+(:Owner {name:"Deepa"})
+(:Owner {name:"Evan"})
+
+(:Pet {id:1, name:"Alice's Dog", species:"Dog", breed:"Labrador", birth_date:"2020-05-10", vet_visits:2, notes:"Loves swimming"})
+(:Pet {id:2, name:"Bob's Cat", species:"Cat", breed:"Siamese", birth_date:"2022-01-15", shed_frequency:"Weekly", notes:"Indoor only"})
+(:Pet {id:3, name:"Cara's Parrot", species:"Parrot", breed:"African Grey", birth_date:"2018-03-12", notes:"Very talkative"})
+(:Pet {id:4, name:"Deepa's Snake", species:"Snake", breed:"Corn Snake", birth_date:"2021-10-05", shed_frequency:"Rarely", vet_visits:3, notes:"Eats frozen mice"})
+(:Pet {id:5, name:"Evan's Dog", species:"Dog", breed:"Beagle", birth_date:"2019-12-20", notes:"Friendly with kids"})
+
 (:Medication {name:"Heartgard"})
+(:Medication {name:"Flea collar"})
+(:Medication {name:"Vitamin drops"})
+
+(:Trick {name:"Sit"})
+(:Trick {name:"Stay"})
 (:Trick {name:"Fetch"})
-(:Pet {species:"Parrot", name:"Cara’s Parrot"})
+(:Trick {name:"Roll over"})
+
+(:Word {text:"Hello"})
+(:Word {text:"Pretty bird"})
+(:Word {text:"Bye-bye"})
 
 ```
 
 ### Edges:
 
 ```
-(:Owner {name:"Alice"}) -[:OWNS]-> (:Pet {species:"Dog"})
-(:Pet {species:"Dog"}) -[:TOOK_MED]-> (:Medication {name:"Heartgard"})
-(:Pet {species:"Dog"}) -[:LEARNED]-> (:Trick {name:"Fetch"})
-(:Owner {name:"Cara"}) -[:OWNS]-> (:Pet {species:"Parrot"})
-(:Pet {species:"Parrot"}) -[:KNOWS_WORD]-> (:Word {text:"Hello"})
+(:Owner {name:"Alice"}) -[:OWNS]-> (:Pet {id:1})
+(:Owner {name:"Bob"})   -[:OWNS]-> (:Pet {id:2})
+(:Owner {name:"Cara"})  -[:OWNS]-> (:Pet {id:3})
+(:Owner {name:"Deepa"}) -[:OWNS]-> (:Pet {id:4})
+(:Owner {name:"Evan"})  -[:OWNS]-> (:Pet {id:5})
+
+(:Pet {id:1}) -[:TOOK_MED]-> (:Medication {name:"Heartgard"})
+(:Pet {id:3}) -[:TOOK_MED]-> (:Medication {name:"Vitamin drops"})
+(:Pet {id:5}) -[:TOOK_MED]-> (:Medication {name:"Heartgard"})
+(:Pet {id:5}) -[:TOOK_MED]-> (:Medication {name:"Flea collar"})
+
+(:Pet {id:1}) -[:LEARNED]-> (:Trick {name:"Sit"})
+(:Pet {id:1}) -[:LEARNED]-> (:Trick {name:"Stay"})
+(:Pet {id:1}) -[:LEARNED]-> (:Trick {name:"Fetch"})
+(:Pet {id:5}) -[:LEARNED]-> (:Trick {name:"Roll over"})
+
+(:Pet {id:3}) -[:KNOWS_WORD]-> (:Word {text:"Hello"})
+(:Pet {id:3}) -[:KNOWS_WORD]-> (:Word {text:"Pretty bird"})
+(:Pet {id:3}) -[:KNOWS_WORD]-> (:Word {text:"Bye-bye"})
 
 ```
+
