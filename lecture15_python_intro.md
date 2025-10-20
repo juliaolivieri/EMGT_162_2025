@@ -191,8 +191,7 @@ taxis.sort_values("fare", ascending = False)
 1. Filter to only rows for which the `bill_length_mm` is less than 40 but the `bill_depth_mm` is greater than 20.
 1. What is the length of the longest bill of an Adelie penguin?
 1. Of the Gentoo penguins, how many are male and how many are female?
-1. Continue translating this R script into a python script (so, create a jupyter notebook that performs this same analysis): https://juliaolivieri.github.io/
-1. For any of these commands, do you prefer the syntax or output from R rather than Python, or vice versa?
+
 
 
 
