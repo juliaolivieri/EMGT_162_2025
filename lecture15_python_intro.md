@@ -4,7 +4,7 @@ Complete the bolded questions. Move on to the non-bolded questions if you have e
 
 ## Part 1
 
-## Install Anaconda
+### Install Anaconda
 
 If you can't find the "Anaconda-Navigator" Application on your computer, you should install it. 
 
@@ -12,14 +12,14 @@ If you can't find the "Anaconda-Navigator" Application on your computer, you sho
 2. Install Anaconda from the downloaded file. You can choose the default options during the install. Make a note of where Anaconda is getting installed.
 3. Once installation is complete, you should be able to find the "Anaconda-Navigator" application on your computer. If you have trouble with this, try following the instructions here: https://docs.anaconda.com/navigator/getting-started/.
 
-## Launching Jupyter Notebooks
+### Launching Jupyter Notebooks
 
 1. Open Anaconda-Navigator.
 1. Click "Launch" in the Jupyter Notebook box. It will launch Jupyter Notebook in your default browser.
 1. Navigate to the folder where you want to create a notebook, and choose "New" --> Python 3 (ipykernel) to launch a new notebook.
 1. Rename the notebook by clicking on the current title ("Untitled").
 
-## Using a Jupyter Notebook
+### Using a Jupyter Notebook
 
 Each section of a notebook is called a "cell" or a "block."
 1. **Create a new Markdown block: To add a new code block, press "+" under the title of your notebook. Choose "Markdown" in the drop-down menu of the same toolbar.**
@@ -38,7 +38,7 @@ Each section of a notebook is called a "cell" or a "block."
 1. **Whenever you re-open a notebook, all of your variables will be lost. You can "force" this to happen in your current notebook by choosing "Kernel" in the Jupyter Notebook toolbar and choosing "Restart kernel." Try doing this.**
 1. **Try re-running each block of your notebook. Does an error occur? Why? Try fixing this error.**
 
-## Practice with Python
+### Practice with Python
 
 Examples from class:
 ```
@@ -98,7 +98,7 @@ math.sqrt(x)
    
    $$ (X_1 - X_2) + t\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} $$
 
-## Extra jupyter notebook practice
+### Extra jupyter notebook practice
 1. Assign the sum of 1 and -4 as `a`.
 1. Assign the absolute value of `a` as `b` (use the `abs()` function).
 1. Assign `b` minus 1 as `d`.
@@ -158,6 +158,7 @@ taxis["payment"].value_counts()
 1. **(CW) How many penguins of each species are in the datset?**
 1. How many penguins are from each island in the dataset?
 
+## Part 3
 
 ### Filtering and sorting
 
@@ -192,6 +193,7 @@ taxis.sort_values("fare", ascending = False)
 1. Of the Gentoo penguins, how many are male and how many are female?
 1. Continue translating this R script into a python script (so, create a jupyter notebook that performs this same analysis): https://juliaolivieri.github.io/
 1. For any of these commands, do you prefer the syntax or output from R rather than Python, or vice versa?
+
 
 
 
