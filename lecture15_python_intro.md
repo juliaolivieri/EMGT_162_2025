@@ -104,7 +104,6 @@ math.sqrt(x)
 
 ## Part 2
 
-Mapping between R and Python commands: [https://github.com/juliaolivieri/COMP_162_2024/blob/main/lecture15/python_R_translation.md](https://github.com/juliaolivieri/COMP_162_2025/blob/main/L15_python_intro/python_R_translation.md)
 
 Dataset used in class examples:`taxis.csv`, https://drive.google.com/file/d/1yzcou-mgYXhanO_gP69TZyEC_2S5sm0f/view?usp=sharing
 
@@ -124,12 +123,11 @@ taxis.to_csv("new_taxis.csv", index = False)
 
 #### Exercises
 
-1. **(CW) Import the required package for these exercises:**
+1. **Import the required package for these exercises:**
    ```
    import pandas as pd
    ```
-1. **(CW) Load `penguins.csv` into your notebook using `pd.read_csv()`. Save the dataframe to a variable called `penguins`. Link to dataset: https://drive.google.com/file/d/1ESxaIakPh6IpsA_x1H1798003CuqJP8r/view?usp=sharing**
-2. **(CW) Load `mining.csv` into your notebook. Save this dataframe to a variable called `mining`. Link to dataset: https://drive.google.com/file/d/1Z6_ejcVUrmB39BO3GJ2bmwD8lrrX2TvW/view?usp=sharing**
+1. **Load `penguins.csv` into your notebook using `pd.read_csv()`. Save the dataframe to a variable called `penguins`. Link to dataset: https://drive.google.com/file/d/1ESxaIakPh6IpsA_x1H1798003CuqJP8r/view?usp=sharing**
 
 ### Filtering and sorting
 
@@ -147,17 +145,22 @@ taxis[taxis["fare"] < 5]
 
 # sort dataframe by fare
 taxis.sort_values("fare")
+
+# sort dataframe by fare in descending order
+taxis.sort_values("fare", ascending = False)
 ```
 
 #### Exercises
 
-1. **(CW) Sort the penguins dataframe by `bill_length_mm`.**
-1. **(CW) Subset the penguins dataframe to only the categorical columns. Save the result as `cat_penguins`.**
-1. **(CW) Subset the penguins dataframe to only rows for which the `bill_depth_mm` is greater than 17. Call this `bigbill_penguins`.**
-1. **(CW) Write the dataframe `bigbill_penguins` to a csv.**
+1. **Sort the penguins dataframe by `bill_length_mm`.**
+1. **Subset the penguins dataframe to only the columns with non-numeric values. Save the result as `nonquant_penguins`.**
+1. **Subset the penguins dataframe to only rows for which the `bill_depth_mm` is greater than 17. Call this `bigbill_penguins`.**
+1. **Write the dataframe `bigbill_penguins` to a csv.**
 1. Filter to only rows for which `species` is `Adelie` or `Gentoo`.
 1. Filter to only rows for which the `bill_length_mm` is less than 40 but the `bill_depth_mm` is greater than 20.
 1. What is the length of the longest bill of an Adelie penguin?
 1. Of the Gentoo penguins, how many are male and how many are female?
 1. Continue translating this R script into a python script (so, create a jupyter notebook that performs this same analysis): https://juliaolivieri.github.io/
 1. For any of these commands, do you prefer the syntax or output from R rather than Python, or vice versa?
+
+
