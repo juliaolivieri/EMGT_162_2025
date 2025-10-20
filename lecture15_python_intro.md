@@ -133,6 +133,32 @@ taxis.to_csv("new_taxis.csv", index = False)
    ```
 1. **Load `penguins.csv` into your notebook using `pd.read_csv()`. Save the dataframe to a variable called `penguins`. Link to dataset: https://drive.google.com/file/d/1ESxaIakPh6IpsA_x1H1798003CuqJP8r/view?usp=sharing**
 
+### Descriptive statistics
+
+#### Code from class
+
+```
+# find number of rows and columns
+taxis.shape
+
+# display first 10 rows
+taxis.head(10)
+
+# display last 8 rows
+taxis.tail(8)
+
+# Find the frequency of each value of a categorical column
+taxis["payment"].value_counts()
+```
+
+#### Exercises
+
+1. **Find the number of rows and columns of the penguins dataset.** 
+1. **Display the last 6 rows of the penguins dataset.**
+1. **(CW) How many penguins of each species are in the datset?**
+1. How many penguins are from each island in the dataset?
+
+
 ### Filtering and sorting
 
 #### Code from class
@@ -166,6 +192,7 @@ taxis.sort_values("fare", ascending = False)
 1. Of the Gentoo penguins, how many are male and how many are female?
 1. Continue translating this R script into a python script (so, create a jupyter notebook that performs this same analysis): https://juliaolivieri.github.io/
 1. For any of these commands, do you prefer the syntax or output from R rather than Python, or vice versa?
+
 
 
 
