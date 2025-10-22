@@ -38,7 +38,7 @@ Documentation for function:
 
 You will submit the .html version of your Jupyter Notebook for this assignment (File --> Save and export notebook as... --> html). Label the code that answers each question with a comment or a Markdown block. 
 
-1. Download the college majors dataset and load it using pandas: https://drive.google.com/file/d/1WK9sQdr_S7RHDUIdEBPZ88dPeOUvTY7E/view?usp=sharing (you can find documentation about this dataset here: https://data.world/fivethirtyeight/college-majors/workspace/file?filename=readme.md)
+1. Download the college majors dataset and load it using pandas: https://drive.google.com/file/d/1WK9sQdr_S7RHDUIdEBPZ88dPeOUvTY7E/view?usp=sharing (you can find documentation about this dataset here: https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-college-majors-dataset
 1. Use the `.head()` command to display the first 7 rows of the data frame.
 1. Use `.shape` to find the number of rows and columns of the dataframe.
 1. Use `.describe(include="all")` to calculate basic summary statistics for the data.
@@ -53,3 +53,4 @@ You will submit the .html version of your Jupyter Notebook for this assignment (
 1. Think of a question about this dataset that you can answer using the tools we've learned so far (for example, "what's the difference in employment rate between STEM and non-STEM majors?").
 1. Answer your question. Try to gather as much relevant evidence as you can (e.g. plot(s), values in the dataframe, etc). Describe what you are able to conclude.    
 1. Download your jupyter notebook as an html file and submit it (File --> Save and export notebook as... --> html). Make sure each question is labeled in the notebook.
+
