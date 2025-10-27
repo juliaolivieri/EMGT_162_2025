@@ -78,6 +78,7 @@ sns.catplot(penguins, x = "species", y = "body_mass_g", hue = "sex", kind = "box
 
 ## Part 4: Aggregation
 
+| Function | Description |
 |--|--|
 | `.mean()` | average |
 
@@ -95,5 +96,6 @@ penguins.groupby("sex")["body_mass_g"].min()
 ```
 
 1. Find the maximum speed for each value of `Type_Main`
+
 
 
