@@ -80,7 +80,15 @@ sns.catplot(penguins, x = "species", y = "body_mass_g", hue = "sex", kind = "box
 
 | Function | Description |
 |--|--|
-| `.mean()` | average |
+| `.mean()` | Average |
+| `.sum()`  | Sum total | 
+| `.count()` | Number of non-null values |
+| `min()` | Smallest value |
+| `max()` | Largest value |
+| `median()` | Median value |
+| `.std()` | Standard deviation | 
+| `.var()` | Variance | 
+| `.nunique()`  | The number of unique values |
 
 ### Code from class:
 
@@ -96,6 +104,7 @@ penguins.groupby("sex")["body_mass_g"].min()
 ```
 
 1. Find the maximum speed for each value of `Type_Main`
+
 
 
 
