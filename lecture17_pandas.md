@@ -104,6 +104,9 @@ penguins.groupby("sex")["body_mass_g"].min()
 ```
 
 1. Find the maximum speed for each value of `Type_Main`
+2. Find the median of `year_introduced` for each value of `Status`.
+3. Find the number of roller coasters per state
+
 
 
 
