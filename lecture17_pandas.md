@@ -71,6 +71,11 @@ sns.catplot(penguins, x = "species", y = "body_mass_g", hue = "sex")
 sns.catplot(penguins, x = "species", y = "body_mass_g", hue = "sex", kind = "box")
 ```
 
+1. Create a scatterplot of `Drop` vs `speed`. Color by `Type_Main`. What can you learn from this plot?
+2. Create a box plot of `Type_main` vs `year_introduced`. What can you learn from this plot?
+3. Choose two quantitative variables. Create a scatterplot of them. Try changing the size/shape/color of the points to make an informative plot.
+4. Choose a quantitative variable and a categorical variable. Make multiple plots showing the relationship between these two variables (histogram colored by categorical, box plot, etc). Which plot is most informative?
+
 ## Part 4: Aggregation
 
 ### Code from class:
@@ -78,5 +83,6 @@ sns.catplot(penguins, x = "species", y = "body_mass_g", hue = "sex", kind = "box
 ```
 
 ```
+
 
 
