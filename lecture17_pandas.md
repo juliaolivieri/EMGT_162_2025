@@ -78,11 +78,22 @@ sns.catplot(penguins, x = "species", y = "body_mass_g", hue = "sex", kind = "box
 
 ## Part 4: Aggregation
 
+|--|--|
+| `.mean()` | average |
+
 ### Code from class:
 
 ```
+# mean body mass of each species
+penguins.groupby("species")["body_mass_g"].mean()
 
+# median body mass from each island
+penguins.groupby("island")["body_mass_g"].median()
+
+# minimum body mass by sex
+penguins.groupby("sex")["body_mass_g"].min()
 ```
 
+1. Find the maximum speed for each value of `Type_Main`
 
 
