@@ -6,6 +6,8 @@ Links to roller coaster dataset:
 
 ## Part 1: Practice from last class
 
+Try to minimize the amount you look at the examples from last week while you're working on these problems. The goal is to be able to access these commands from memory.
+
 1. Load the relevant python libraries (pandas, seaborn, matplotlib).
 2. Load the data from `coasters.csv`.
 3. Display the first five rows of the resulting dataframe.
@@ -37,4 +39,23 @@ df.merge(species, how = "right", left_on = "species", right_on = "name")
    * outer
    * left
    * right
-3. Which join type is most appropriate in this case?
+3. Which join type would you choose if you were analyzing this data?
+4. Save the resulting merged dataframe with your chosen join type to a new variable name.
+5. Create a plot showing the number of coasters from each state.
+
+## Part 3: Plotting
+
+### Code from class:
+
+```
+
+```
+
+## Part 4: Aggregation
+
+### Code from class:
+
+```
+
+```
+
