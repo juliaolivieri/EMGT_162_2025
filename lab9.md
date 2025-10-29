@@ -37,6 +37,9 @@ sns.barplot(grouped_result)
 ## Part 1: Plot interpretation questions
 Answer the following plot interpretation questions.
 
+![Q1](plot1.png)
+
+
 ## Part 2: Data analysis questions
 
 1. Download this bikesharing data:
@@ -58,6 +61,7 @@ Note: this allows Python to interpret these columns as dates rather than strings
 8. Find the date with the minimum number of riders. Look up this date. Why do you think there were so few bike riders?
 9. Use `sns.relplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
 10. Use `sns.catplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
+
 
 
 
