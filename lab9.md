@@ -81,7 +81,12 @@ Note: this allows Python to interpret these columns as dates rather than strings
     
 10. Use `sns.relplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
     
-11. Use `sns.catplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
+11. What can you learn from the plot you created?
+    
+12. Use `sns.catplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
+    
+13. What can you learn from the plot you created?
+
 
 
 
