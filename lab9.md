@@ -30,8 +30,8 @@ penguins.groupby("island")["body_mass_g"].median()
 penguins.groupby("sex")["body_mass_g"].min()
 
 # plotting result
-grouped_result = penguins.groupby("species")["body_mass_g"].median()
-sns.barplot(grouped_result)
+grouped_result = penguins.groupby("species")["body_mass_g"].median().reset_index()
+sns.barplot(grouped_result, x = "species", y = "body_mass_g")
 ```
 
 ## Part 1: Plot interpretation questions
@@ -86,6 +86,7 @@ Note: this allows Python to interpret these columns as dates rather than strings
 12. Use `sns.catplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
     
 13. What can you learn from the plot you created?
+
 
 
 
