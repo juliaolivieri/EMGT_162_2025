@@ -59,12 +59,10 @@ Answer the following plot interpretation questions.
    * `monthly_info.csv`: https://drive.google.com/file/d/1GBJ3QyVpE31v8kPWCL-4epPFRThrpuL9/view?usp=sharing
 2. Load these two dataframes into pandas and join them, saving the result as a new variable.  What columns should you merge on? What kind of merge should you use?
 3. Change the type of the `date`  and `date_noyear` to datetime objects using the following lines of code (replace `df`  with the name of your dataframe):
-
 ```
 df['date'] = pd.to_datetime(df['date'])
 df['date_noyear'] = pd.to_datetime(df['date_noyear'])
 ```
-
 Note: this allows Python to interpret these columns as dates rather than strings, which improves plotting.
 4. Make a pairplot for this merged data. Which two variables have the strongest linear relationship (as one variable increases, the other tends to increase)?
 5. Find the median number of *casual* riders per weekday (group by weekday, and find the average of `casual`). Which weekdays are most popular for casual riders?
@@ -73,6 +71,7 @@ Note: this allows Python to interpret these columns as dates rather than strings
 8. Find the date with the minimum number of riders. Look up this date. Why do you think there were so few bike riders?
 9. Use `sns.relplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
 10. Use `sns.catplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
+
 
 
 
