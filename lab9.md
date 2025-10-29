@@ -69,19 +69,20 @@ df['date_noyear'] = pd.to_datetime(df['date_noyear'])
 
 Note: this allows Python to interpret these columns as dates rather than strings, which improves plotting.
 
-4. Make a pairplot for this merged data. Which two variables have the strongest linear relationship (as one variable increases, the other tends to increase)?
+5. Make a pairplot for this merged data. Which two variables have the strongest linear relationship (as one variable increases, the other tends to increase)?
    
 6. Find the median number of *casual* riders per weekday (group by weekday, and find the average of `casual`). Which weekdays are most popular for casual riders?
    
-8. Make a bar plot of the median number of casual riders per weekday.
+7. Make a bar plot of the median number of casual riders per weekday.
    
-10. Find the median number of *registered* riders per weekday (group by weekday, and find the average of `registered`). Which weekdays are most popular for registered riders?
+8. Find the median number of *registered* riders per weekday (group by weekday, and find the average of `registered`). Which weekdays are most popular for registered riders?
     
-12. Find the date with the minimum number of riders. Look up this date. Why do you think there were so few bike riders?
+9. Find the date with the minimum number of riders. Look up this date. Why do you think there were so few bike riders?
     
-14. Use `sns.relplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
+10. Use `sns.relplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
     
-15. Use `sns.catplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
+11. Use `sns.catplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
+
 
 
 
