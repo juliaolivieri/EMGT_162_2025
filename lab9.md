@@ -71,11 +71,11 @@ Note: this allows Python to interpret these columns as dates rather than strings
 
 5. Make a pairplot for this merged data. Which two variables have the strongest linear relationship (as one variable increases, the other tends to increase)?
    
-6. Find the median number of *casual* riders per weekday (group by weekday, and find the average of `casual`). Which weekdays are most popular for casual riders?
+6. Find the median number of *casual* riders per weekday (group by weekday, and find the median of `casual`). Which weekdays are most popular for casual riders?
    
 7. Make a bar plot of the median number of casual riders per weekday.
    
-8. Find the median number of *registered* riders per weekday (group by weekday, and find the average of `registered`). Which weekdays are most popular for registered riders?
+8. Find the median number of *registered* riders per weekday (group by weekday, and find the median of `registered`). Which weekdays are most popular for registered riders?
     
 9. Find the date with the minimum number of riders. Look up this date. Why do you think there were so few bike riders?
     
@@ -86,6 +86,7 @@ Note: this allows Python to interpret these columns as dates rather than strings
 12. Use `sns.catplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
     
 13. What can you learn from the plot you created?
+
 
 
 
