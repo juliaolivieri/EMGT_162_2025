@@ -40,12 +40,16 @@ Answer the following plot interpretation questions.
 1. 
 ![Q1](plot1.png)
 
+2. 
 ![Q2](plot2.png)
 
+3. 
 ![Q3](plot3.png)
 
+4. 
 ![Q4](plot4.png)
 
+5. 
 ![Q5](plot5.png)
 
 ## Part 2: Data analysis questions
@@ -69,6 +73,7 @@ Note: this allows Python to interpret these columns as dates rather than strings
 8. Find the date with the minimum number of riders. Look up this date. Why do you think there were so few bike riders?
 9. Use `sns.relplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
 10. Use `sns.catplot()` to make a plot with this data. You can use additional arguments to try to make as interesting/informative of a plot as possible.
+
 
 
 
