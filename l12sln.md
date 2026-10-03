@@ -10,36 +10,30 @@
 ## Key-value Database
 
 ```
-{
-  "customer:1": {
-    "name": "Alice",
-    "email": "alice@site.com",
-    "phone": "555-1234",
-    "last_purchase": "2025-09-10",
-    "cart_items": ["Headphones"],
-    "support_tickets": 2,
-    "loyalty_points": 320
-  },
-  "customer:2": {
-    "name": "Bob",
-    "notes": "Browsed site once, no account."
-  },
-  "customer:3": {
-    "name": "Cara",
-    "email": "cara@site.com",
-    "phone": "555-7890",
-    "cart_items": ["Laptop", "Mouse"],
-    "loyalty_points": 500,
-    "notes": "VIP customer, follow-up via email."
-  },
-  "customer:4": {
-    "name": "Deepa",
-    "email": "deepa@shop.co",
-    "last_purchase": "2025-09-01",
-    "cart_items": ["Coffee Maker"],
-    "support_tickets": 1
-  }
-}
+"customer:1:name"             -> "Alice"
+"customer:1:email"            -> "alice@site.com"
+"customer:1:phone"            -> "555-1234"
+"customer:1:last_purchase"    -> "2025-09-10"
+"customer:1:cart_items"       -> ["Headphones"]
+"customer:1:support_tickets"  -> 2
+"customer:1:loyalty_points"   -> 320
+
+"customer:2:name"             -> "Bob"
+"customer:2:notes"            -> "Browsed site once, no account."
+
+"customer:3:name"             -> "Cara"
+"customer:3:email"            -> "cara@site.com"
+"customer:3:phone"            -> "555-7890"
+"customer:3:last_purchase"    -> "2025-09-20"
+"customer:3:cart_items"       -> ["Laptop", "Mouse"]
+"customer:3:loyalty_points"   -> 500
+"customer:3:notes"            -> "VIP customer, follow-up via email."
+
+"customer:4:name"             -> "Deepa"
+"customer:4:email"            -> "deepa@shop.co"
+"customer:4:last_purchase"    -> "2025-09-01"
+"customer:4:cart_items"       -> ["Coffee Maker"]
+"customer:4:support_tickets"  -> 1
 
 ```
 
