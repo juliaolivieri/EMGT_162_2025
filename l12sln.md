@@ -116,13 +116,43 @@ Row key: 4
 ### Nodes
 
 ```
-(:Customer {name:"Alice", email:"alice@site.com"})
+(:Customer {
+  id:1,
+  name:"Alice",
+  email:"alice@site.com",
+  phone:"555-1234",
+  last_purchase:"2025-09-10",
+  support_tickets:2,
+  loyalty_points:320
+})
+
+(:Customer {
+  id:2,
+  name:"Bob",
+  notes:"Browsed site once, no account."
+})
+
+(:Customer {
+  id:3,
+  name:"Cara",
+  email:"cara@site.com",
+  phone:"555-7890",
+  last_purchase:"2025-09-20",
+  loyalty_points:500,
+  notes:"VIP customer, follow-up via email."
+})
+
+(:Customer {
+  id:4,
+  name:"Deepa",
+  email:"deepa@shop.co",
+  last_purchase:"2025-09-01",
+  support_tickets:1
+})
+
 (:Product {name:"Headphones"})
-(:Ticket {id:201})
-(:Customer {name:"Cara"})
 (:Product {name:"Laptop"})
 (:Product {name:"Mouse"})
-(:Customer {name:"Deepa"})
 (:Product {name:"Coffee Maker"})
 
 ```
@@ -130,11 +160,11 @@ Row key: 4
 ### Edges
 
 ```
-(:Customer {name:"Alice"}) -[:PURCHASED {date:"2025-09-10"}]-> (:Product {name:"Headphones"})
-(:Customer {name:"Cara"}) -[:ADDED_TO_CART]-> (:Product {name:"Laptop"})
-(:Customer {name:"Cara"}) -[:ADDED_TO_CART]-> (:Product {name:"Mouse"})
-(:Customer {name:"Deepa"}) -[:PURCHASED]-> (:Product {name:"Coffee Maker"})
-(:Customer {name:"Alice"}) -[:HAS_TICKET]-> (:Ticket {id:201})
-(:Customer {name:"Deepa"}) -[:HAS_TICKET]-> (:Ticket {id:202})
+(:Customer {id:1}) -[:ADDED_TO_CART]-> (:Product {name:"Headphones"})
+
+(:Customer {id:3}) -[:ADDED_TO_CART]-> (:Product {name:"Laptop"})
+(:Customer {id:3}) -[:ADDED_TO_CART]-> (:Product {name:"Mouse"})
+
+(:Customer {id:4}) -[:ADDED_TO_CART]-> (:Product {name:"Coffee Maker"})
 
 ```
