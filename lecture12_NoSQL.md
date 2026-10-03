@@ -182,11 +182,11 @@ Row key: 5
 (:Owner {name:"Deepa"})
 (:Owner {name:"Evan"})
 
-(:Pet {id:1, name:"Alice's Dog", species:"Dog", breed:"Labrador", birth_date:"2020-05-10", vet_visits:2, notes:"Loves swimming"})
-(:Pet {id:2, name:"Bob's Cat", species:"Cat", breed:"Siamese", birth_date:"2022-01-15", shed_frequency:"Weekly", notes:"Indoor only"})
-(:Pet {id:3, name:"Cara's Parrot", species:"Parrot", breed:"African Grey", birth_date:"2018-03-12", notes:"Very talkative"})
-(:Pet {id:4, name:"Deepa's Snake", species:"Snake", breed:"Corn Snake", birth_date:"2021-10-05", shed_frequency:"Rarely", vet_visits:3, notes:"Eats frozen mice"})
-(:Pet {id:5, name:"Evan's Dog", species:"Dog", breed:"Beagle", birth_date:"2019-12-20", notes:"Friendly with kids"})
+(:Pet {id:1, species:"Dog", breed:"Labrador", birth_date:"2020-05-10", vet_visits:2, notes:"Loves swimming"})
+(:Pet {id:2, species:"Cat", breed:"Siamese", birth_date:"2022-01-15", vet_visits:1, shed_frequency:"Weekly", notes:"Indoor only"})
+(:Pet {id:3, species:"Parrot", breed:"African Grey", birth_date:"2018-03-12", notes:"Very talkative"})
+(:Pet {id:4, species:"Snake", breed:"Corn Snake", birth_date:"2021-10-05", shed_frequency:"Rarely", vet_visits:3, notes:"Eats frozen mice"})
+(:Pet {id:5, species:"Dog", breed:"Beagle", birth_date:"2019-12-20", notes:"Friendly with kids"})
 
 (:Medication {name:"Heartgard"})
 (:Medication {name:"Flea collar"})
@@ -212,19 +212,18 @@ Row key: 5
 (:Owner {name:"Deepa"}) -[:OWNS]-> (:Pet {id:4})
 (:Owner {name:"Evan"})  -[:OWNS]-> (:Pet {id:5})
 
-(:Pet {id:1}) -[:TOOK_MED]-> (:Medication {name:"Heartgard"})
-(:Pet {id:3}) -[:TOOK_MED]-> (:Medication {name:"Vitamin drops"})
-(:Pet {id:5}) -[:TOOK_MED]-> (:Medication {name:"Heartgard"})
-(:Pet {id:5}) -[:TOOK_MED]-> (:Medication {name:"Flea collar"})
+(:Pet {id:1}) -[:TAKES_MEDICATION]-> (:Medication {name:"Heartgard"})
+(:Pet {id:3}) -[:TAKES_MEDICATION]-> (:Medication {name:"Vitamin drops"})
+(:Pet {id:5}) -[:TAKES_MEDICATION]-> (:Medication {name:"Heartgard"})
+(:Pet {id:5}) -[:TAKES_MEDICATION]-> (:Medication {name:"Flea collar"})
 
-(:Pet {id:1}) -[:LEARNED]-> (:Trick {name:"Sit"})
-(:Pet {id:1}) -[:LEARNED]-> (:Trick {name:"Stay"})
-(:Pet {id:1}) -[:LEARNED]-> (:Trick {name:"Fetch"})
-(:Pet {id:5}) -[:LEARNED]-> (:Trick {name:"Roll over"})
+(:Pet {id:1}) -[:KNOWS_TRICK]-> (:Trick {name:"Sit"})
+(:Pet {id:1}) -[:KNOWS_TRICK]-> (:Trick {name:"Stay"})
+(:Pet {id:1}) -[:KNOWS_TRICK]-> (:Trick {name:"Fetch"})
+(:Pet {id:5}) -[:KNOWS_TRICK]-> (:Trick {name:"Roll over"})
 
 (:Pet {id:3}) -[:KNOWS_WORD]-> (:Word {text:"Hello"})
 (:Pet {id:3}) -[:KNOWS_WORD]-> (:Word {text:"Pretty bird"})
 (:Pet {id:3}) -[:KNOWS_WORD]-> (:Word {text:"Bye-bye"})
-
 ```
 
