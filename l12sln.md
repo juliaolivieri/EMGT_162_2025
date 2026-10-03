@@ -96,6 +96,7 @@ Row key: 2
 Row key: 3
   info:name = "Cara"
   info:email = "cara@site.com"
+  info:phone = "555-7890"
   purchases:last_purchase = "2025-09-20"
   purchases:cart_items = ["Laptop", "Mouse"]
   loyalty:points = 500
@@ -103,6 +104,8 @@ Row key: 3
 
 Row key: 4
   info:name = "Deepa"
+  info:email = "deepa@shop.co"
+  purchases:last_purchase = "2025-09-01"
   purchases:cart_items = ["Coffee Maker"]
   support:tickets = 1
 
