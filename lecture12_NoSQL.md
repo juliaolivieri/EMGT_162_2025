@@ -13,53 +13,52 @@
 ## Key-Value Database
 
 ```
-{
-  "pet:1": {
-    "owner_name": "Alice",
-    "species": "Dog",
-    "breed": "Labrador",
-    "birth_date": "2020-05-10",
-    "meds": ["Heartgard"],
-    "vet_visits": 2,
-    "tricks": ["Sit", "Stay", "Fetch"],
-    "notes": "Loves swimming"
-  },
-  "pet:2": {
-    "owner_name": "Bob",
-    "species": "Cat",
-    "breed": "Siamese",
-    "birth_date": "2022-01-15",
-    "shed_frequency": "Weekly",
-    "notes": "Indoor only"
-  },
-  "pet:3": {
-    "owner_name": "Cara",
-    "species": "Parrot",
-    "breed": "African Grey",
-    "birth_date": "2018-03-12",
-    "meds": ["Vitamin drops"],
-    "words_known": ["Hello", "Pretty bird", "Bye-bye"],
-    "notes": "Very talkative"
-  },
-  "pet:4": {
-    "owner_name": "Deepa",
-    "species": "Snake",
-    "breed": "Corn Snake",
-    "birth_date": "2021-10-05",
-    "shed_frequency": "Rarely",
-    "vet_visits": 3,
-    "notes": "Eats frozen mice"
-  },
-  "pet:5": {
-    "owner_name": "Evan",
-    "species": "Dog",
-    "breed": "Beagle",
-    "birth_date": "2019-12-20",
-    "meds": ["Heartgard", "Flea collar"],
-    "tricks": ["Roll over"],
-    "notes": "Friendly with kids"
-  }
-}
+## Key-Value Database
+
+Each piece of information is stored as a separate key-value pair.  
+The key identifies both the pet and the attribute being stored.
+
+```text
+"pet:1:owner_name"       -> "Alice"
+"pet:1:species"          -> "Dog"
+"pet:1:breed"            -> "Labrador"
+"pet:1:birth_date"       -> "2020-05-10"
+"pet:1:meds"             -> ["Heartgard"]
+"pet:1:vet_visits"       -> 2
+"pet:1:tricks"           -> ["Sit", "Stay", "Fetch"]
+"pet:1:notes"            -> "Loves swimming"
+
+"pet:2:owner_name"       -> "Bob"
+"pet:2:species"          -> "Cat"
+"pet:2:breed"            -> "Siamese"
+"pet:2:birth_date"       -> "2022-01-15"
+"pet:2:shed_frequency"   -> "Weekly"
+"pet:2:vet_visits"       -> 1
+"pet:2:notes"            -> "Indoor only"
+
+"pet:3:owner_name"       -> "Cara"
+"pet:3:species"          -> "Parrot"
+"pet:3:breed"            -> "African Grey"
+"pet:3:birth_date"       -> "2018-03-12"
+"pet:3:meds"             -> ["Vitamin drops"]
+"pet:3:words_known"      -> ["Hello", "Pretty bird", "Bye-bye"]
+"pet:3:notes"            -> "Very talkative"
+
+"pet:4:owner_name"       -> "Deepa"
+"pet:4:species"          -> "Snake"
+"pet:4:breed"            -> "Corn Snake"
+"pet:4:birth_date"       -> "2021-10-05"
+"pet:4:vet_visits"       -> 3
+"pet:4:shed_frequency"   -> "Rarely"
+"pet:4:notes"            -> "Eats frozen mice"
+
+"pet:5:owner_name"       -> "Evan"
+"pet:5:species"          -> "Dog"
+"pet:5:breed"            -> "Beagle"
+"pet:5:birth_date"       -> "2019-12-20"
+"pet:5:meds"             -> ["Heartgard", "Flea collar"]
+"pet:5:tricks"           -> ["Roll over"]
+"pet:5:notes"            -> "Friendly with kids"
 
 ```
 
